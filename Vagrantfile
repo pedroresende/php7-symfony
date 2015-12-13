@@ -7,7 +7,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.define :php7 do |php7|
         php7.vm.box = "Debian8"
-        php7.vm.box_url = "echo deb http://dl.hhvm.com/debian jessie main | sudo tee /etc/apt/sources.list.d/hhvm.list"
+        php7.vm.box_url = "https://github.com/kraksoft/vagrant-box-debian/releases/download/8.1.0/debian-8.1.0-amd64.box"
         php7.vm.provider "virtualbox" do |v|
             # show a display for easy debugging
             v.gui = false
